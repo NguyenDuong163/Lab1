@@ -1,0 +1,71 @@
+void sequenceLed(int a){
+	HAL_GPIO_WritePin(h0_GPIO_Port,h0_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h1_GPIO_Port,h1_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h2_GPIO_Port,h2_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h3_GPIO_Port,h3_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h4_GPIO_Port,h4_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h5_GPIO_Port,h5_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h6_GPIO_Port,h6_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h7_GPIO_Port,h7_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h8_GPIO_Port,h8_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h9_GPIO_Port,h9_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h10_GPIO_Port,h10_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(h11_GPIO_Port,h11_Pin,GPIO_PIN_SET);
+	  switch (a){
+	  case 1:
+		  HAL_GPIO_WritePin(h0_GPIO_Port,h0_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 2:
+		  HAL_GPIO_WritePin(h1_GPIO_Port,h1_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 3:
+		  HAL_GPIO_WritePin(h2_GPIO_Port,h2_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 4:
+		  HAL_GPIO_WritePin(h3_GPIO_Port,h3_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 5:
+		  HAL_GPIO_WritePin(h4_GPIO_Port,h4_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 6:
+		  HAL_GPIO_WritePin(h5_GPIO_Port,h5_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 7:
+		  HAL_GPIO_WritePin(h6_GPIO_Port,h6_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 8:
+		  HAL_GPIO_WritePin(h7_GPIO_Port,h7_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 9:
+		  HAL_GPIO_WritePin(h8_GPIO_Port,h8_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 10:
+		  HAL_GPIO_WritePin(h9_GPIO_Port,h9_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 11:
+		  HAL_GPIO_WritePin(h10_GPIO_Port,h10_Pin,GPIO_PIN_RESET);
+		  break;
+	  case 12:
+		  HAL_GPIO_WritePin(h11_GPIO_Port,h11_Pin,GPIO_PIN_RESET);
+		  break;
+	  default:
+		  HAL_GPIO_WritePin(h0_GPIO_Port,h0_Pin,GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(h1_GPIO_Port,h1_Pin,GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(h2_GPIO_Port,h2_Pin,GPIO_PIN_RESET);
+	  }
+  }
+  int count =0;
+  while (1)
+  {
+	  count++;
+	  sequenceLed(count);
+	  if (count>=12){
+		  count=0;
+	  }
+	  HAL_Delay(1000);
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
