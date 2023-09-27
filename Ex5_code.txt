@@ -206,9 +206,6 @@ void display7SEG(int a){
   int count =0;
   while (1)
   {
-	  //if (counter>=10) counter=0;
-	  //display7SEG(count);
-	  //HAL_Delay(1000);
 	  count++;
 	  if (count<=5){
 		  if (count<=3){
